@@ -28,7 +28,6 @@ Output datasets:
 // PART 0 // FILE MANAGEMENT
 global myfiles "yourfilepath"
 global nr "\Supp1_NutrientRequirements_DRIs_2019.xlsx"
-global whogrowth "\Supp2_WHO growth reference tables_2006.xlsx"
 global contbf "\Supp3_NutrientRequirements_6-23months"
 
 * Working directory
