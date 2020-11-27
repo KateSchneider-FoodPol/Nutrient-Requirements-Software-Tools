@@ -1,35 +1,48 @@
 /* 
 Kate Schneider (kate.schneider@tufts.edu)
-Last modified: September 13, 2019
+Last modified: 26 November 2020
 Purpose: Software tools to compile DRI nutrient requirements recalculated for
 	WHO growth references and with optional adjustment if including children 6-23 
-	months.	The final data shape is strucuture appropriately as the nutrient requirement
+	months.	The final data shape is strucutured appropriately as the nutrient requirement
 	inputs to the protocol for calculating the Cost of Nutrient Adequacy (CoNA),
-	described in the companion software tools article Bai et al (2019).
+	described in the companion software tools article Bai et al (2020).
 Supporting Explanatory Documentation: 
-	o Schneider, K. & Herforth, A. 2019. "Software tools for practical application 
+	o Schneider, K. & Herforth, A. 2020. "Software tools for practical application 
 		of human nutrient requirements in food-based social science research". 
 		Gates Open Research.
-	o Input data spreadsheet "Notes" and "Definitions" sheets
+	o Input datasets "Notes" files
 Input data: 
-	Supp1_NutrientRequirements_DRIs_2019.xlsx
-	Supp2_WHO growth reference tables_2006.xlsx
-	Supp3_NutrientRequirements_6-23months.xlsx
+	Supplement 1: 1_NutrientRequirements_Notes
+	Supplement 2: 2_WHOGrowthCharts_Notes
+	Supplement 3: 3_NutrientRequirements6-23months_Notes
 Output datasets: 
-	EAR+UL+AMDR+CDDR_allgroups
-	EAR+UL+AMDR+CDDR+BF_allgroups
-	EAR+UL+AMDR+CDDR+BF+WHOGrowth_allgroups
+	EAR+UL+AMDR+CDRR_allgroups
+	EAR+UL+AMDR+CDRR+BF_allgroups
+	EAR+UL+AMDR+CDRR+BF+WHOGrowth_allgroups
 	Part 5 gives example code to extract the nutrient requirements for a single
 		age-sex group at a specific level of physical activity. This is produces
 		the data in a format suited to merging with the food prices and composition 
-		data in preparation for linear programming in the CoNA protocol. 
+		data in preparation for linear programming in the CoNA protocol.
+		
+Licence:
+Copyright 2020 Kate Schneider
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+		
 */
 
 // PART 0 // FILE MANAGEMENT
 global myfiles "yourfilepath"
-global nr "\Supp1_NutrientRequirements_DRIs_2019.xlsx"
-global whogrowth "\Supp2_WHO-growth-reference-tables_2006.xlsx"
-global contbf "\Supp3_NutrientRequirements_6-23months"
 
 * Working directory
 cd "$myfiles"
@@ -43,8 +56,9 @@ di "`c(current_date)' `c(current_time)'"
 
 * Micronutrients EAR 
 clear 
-import excel using "$myfiles$nr", sheet("Micronutrients_EAR") firstrow
+insheet using "$myfiles\1_NutrientRequirements_MicronutrientsEAR.csv", case
 	// Rename variables (nutr_no follows the "Units_Notes" sheet)
+	// Generate variables for nutrients without EAR
 	gen ear1=.
 	gen ear2=.
 	gen ear3=.
@@ -82,8 +96,9 @@ import excel using "$myfiles$nr", sheet("Micronutrients_EAR") firstrow
 
 * Micronutrients UL 
 clear
-import excel "$myfiles$nr", sheet("Micronutrients_UL") firstrow
+insheet using "$myfiles\1_NutrientRequirements_MicronutrientsUL.csv", case
 	// Rename variables (nutr_no follows the "Units_Notes" sheet)
+	// Generate as missing for nutrients without UL
 	forval i=1/5 {
 		gen ul`i'=.
 		}
@@ -119,7 +134,7 @@ tempfile Micronutrients_UL
 
 * Macronutrients EAR 
 clear 
-import excel "$myfiles$nr", sheet("Macronutrients_EAR") firstrow
+insheet using "$myfiles\1_NutrientRequirements_MacronutrientsEAR.csv", case
 drop lifestage sex age_lower_yrs age_upper_yrs
 rename refweight_kg refweight_protein_kg
 gen nutr_no=4
@@ -128,7 +143,7 @@ tempfile Macronutrients_EAR
 
 * Macronutrients AMDR
 clear
-import excel "$myfiles$nr", sheet("Macronutrients_AMDR") firstrow
+insheet using "$myfiles\1_NutrientRequirements_MacronutrientsAMDR.csv", case
 cap drop if age_sex_grp==.
 	// Rename variables to reshape long
 	rename lipids_lower amdr_lower5
@@ -145,8 +160,7 @@ tempfile Macronutrients_AMDR
 
 * Energy
 clear
-import excel "$myfiles$nr", sheet("Energy") firstrow
-cap drop M N 
+insheet using "$myfiles\1_NutrientRequirements_Energy.csv", case
 gen nutr_no=2
 encode PA_level, gen(pal)
 	tab pal
@@ -168,13 +182,13 @@ tempfile Energy
 
 * Units Notes - imported long by nutrient, merge with UL keeping relevant variables only
 clear
-import excel "$myfiles$nr", sheet("Units_Notes") firstrow
+insheet using "$myfiles\1_NutrientRequirements_UnitsNotes.csv", case
 keep nutr_no ul_note unit amdr_unit
 merge m:m nutr_no using `Micronutrients_UL'
 drop _merge
 order age_sex_grp nutr_no unit ul, first
 	/* NOTE: the sodium UL is the not a Tolerable Upper Intake Level (UL), it is the 
-		Chronic Disease Risk Reduction (CDDR) level as established in the 2019 
+		Chronic Disease Risk Reduction (CDRR) level as established in the 2019 
 		update to the DRIs for sodium and potassium (IOM 2019). 
 		However it functions in practice as an upper bound constraint for the 
 		definition of healthy and adequate diets and therefore is included with 
@@ -211,7 +225,7 @@ clear
 	drop _merge
 	order age_sex_grp nutr_no pal ear ul protein amdr_lower amdr_upper energy, first
 	sort age_sex_grp nutr_no pal
-		* Expand macronutrients to calculate per physical activity level (PAL)
+		* Expand 
 		expand 4 if inlist(nutr_no,3,4,5)
 		sort age_sex_grp nutr_no pal
 		bys age_sex_grp nutr_no: egen v1=seq()
@@ -301,29 +315,30 @@ order nutr, after(nutr_no)
 replace ear=0 if nutr=="Price"
 
 order age_sex_grp nutr_no nutr ear ul amdr_lower amdr_upper pal unit, first
-save EAR+UL+AMDR+CDDR_allgroups, replace
+save EAR+UL+AMDR+CDRR_allgroups, replace
 
 // PART 3 // USE WHO GROWTH CHARTS BASED REFERENCE WEIGHTS 
 clear
-import excel "$myfiles$whogrowth", sheet(Energy_EER) firstrow 
+insheet using "$myfiles\2_WHOGrowthCharts_EnergyEER.csv", case 
 keep age_sex_grp PA_level who_energy iom_energy
 encode PA_level, gen(pal)
 recode pal (1=3) (3=1)
 drop PA_level
 lab drop pal
+destring who_energy, replace
 tab pal, sum(who_energy)
 gen nutr_no=2
 tempfile whoenergy
 	save `whoenergy'
 	
 clear
-import excel "$myfiles$whogrowth", sheet(Protein_EAR) firstrow 
+insheet using "$myfiles\2_WHOGrowthCharts_ProteinEAR.csv", case 
 keep age_sex_grp who_protein
 gen nutr_no=4
 tempfile whoprotein
 	save `whoprotein'
 
-use EAR+UL+AMDR+CDDR_allgroups, clear
+use EAR+UL+AMDR+CDRR_allgroups, clear
 merge m:1 age_sex_grp nutr_no pal using `whoenergy'
 drop _merge
 merge m:1 age_sex_grp nutr_no using `whoprotein'
@@ -332,7 +347,7 @@ replace ear=who_energy if nutr_no==2
 replace ear=who_protein if nutr_no==4
 drop _merge who_* iom*
 
-save EAR+UL+AMDR+CDDR_WHOgrowthref_allgroups, replace
+save EAR+UL+AMDR+CDRR_WHOgrowthref_allgroups, replace
 
 // PART 4 // ADJUSTMENTS FOR THE CONTRIBUTION OF BREASTMILK 
 /* If calculating nutrient requirements for infants 6-23 months still breastfeeding,
@@ -341,13 +356,13 @@ save EAR+UL+AMDR+CDDR_WHOgrowthref_allgroups, replace
 */
 
 clear
-import excel "$myfiles$contbf", sheet(6-23mo_FoodNeeds) firstrow 
+insheet using "$myfiles\3_NutrientRequirements6-23months_6-23moFoodNeeds.csv", case 
 keep age_sex_grp nutr_no pctfromfood bf_match_id
 tempfile bf
 	save `bf'
 
 * Using DRI reference weights
-	use EAR+UL+AMDR+CDDR_allgroups, clear
+	use EAR+UL+AMDR+CDRR_allgroups, clear
 	expand 2 if age_sex_grp==2, gen(bf_match_id)
 		replace bf_match_id=. if !inlist(age_sex_grp,2,3)
 		recode bf_match_id (0=1) (1=2)
@@ -364,10 +379,10 @@ tempfile bf
 		replace pctfromfood=. if !inlist(age_sex_grp,2,3)
 		replace ear=ear*(pctfromfood/100) if pctfromfood!=. & inlist(bf_match_id,1,2,3)
 		
-	save EAR+UL+AMDR+CDDR+BF_allgroups, replace
+	save EAR+UL+AMDR+CDRR+BF_allgroups, replace
 
 * Using WHO Growth Charts for Reference Weights
-	use EAR+UL+AMDR+CDDR_WHOgrowthref_allgroups, clear
+	use EAR+UL+AMDR+CDRR_WHOgrowthref_allgroups, clear
 	expand 2 if age_sex_grp==2, gen(bf_match_id)
 		replace bf_match_id=. if !inlist(age_sex_grp,2,3)
 		recode bf_match_id (0=1) (1=2)
@@ -385,13 +400,13 @@ tempfile bf
 		replace ear=ear*(pctfromfood/100) if pctfromfood!=. & inlist(bf_match_id,1,2,3)
 		drop pctfromfood
 		
-	save EAR+UL+AMDR+CDDR+BF_WHOgrowthref_allgroups, replace
+	save EAR+UL+AMDR+CDRR+BF_WHOgrowthref_allgroups, replace
 	
 // PART 5 // EXTRACT INDIVIDUAL DATA FILES 
 * To import for linear programming:
 * Extract separate data files for each age-sex group at desired PAL
 	* Example using Group 16 Adult Female (age range: 19-30), DRI Reference Weights and PAL=3
-	use "$myfiles\EAR+UL+AMDR+CDDR_allgroups", clear
+	use "$myfiles\EAR+UL+AMDR+CDRR_allgroups", clear
 		keep if age_sex_grp==16
 		tab nutr
 		drop if inlist(pal,1,2,4)
@@ -400,7 +415,7 @@ tempfile bf
 		save NR16_DRIWeight_PAL3, replace
 
 	* Example using Group 10 Adult Male (age range: 19-30), WHO Reference Weights and PAL=4 (developing country farmer)
-	use "$myfiles\EAR+UL+AMDR+CDDR_WHOgrowthref_allgroups", clear
+	use "$myfiles\EAR+UL+AMDR+CDRR_WHOgrowthref_allgroups", clear
 		keep if age_sex_grp==10
 		tab nutr
 		drop if inlist(pal,1,2,3)
@@ -409,7 +424,7 @@ tempfile bf
 		save NR10_WHOWeight_PAL4, replace
 
 	* Example using Group 3 (Infants 12-23 months still breastfeeding), WHO Reference Weights and breastfeeding
-	use "$myfiles\EAR+UL+AMDR+CDDR+BF_WHOgrowthref_allgroups", clear
+	use "$myfiles\EAR+UL+AMDR+CDRR+BF_WHOgrowthref_allgroups", clear
 		keep if age_sex_grp==3
 		drop if inlist(pal,2,3,4) // PAL does not affect energy requirements for this group, keep any one
 		keep nutr_no nutr ear ul amdr_lower amdr_upper unit ul_note
