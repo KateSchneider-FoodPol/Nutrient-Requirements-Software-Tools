@@ -1,0 +1,52 @@
+﻿age_sex_grp,nutr,nutr_no,pctfromfood,age_lower_mos,age_upper_mos,bf_match_id
+2,Energy,2,33,6,8,1
+2,Protein,5,21,6,8,1
+2,Vitamin A,6,16,6,8,1
+2,Vitamin C,8,7,6,8,1
+2,Thiamin,10,53,6,8,1
+2,Riboflavin,11,40,6,8,1
+2,Niacin,12,75,6,8,1
+2,Vitamin B6,13,80,6,8,1
+2,Folate,14,28,6,8,1
+2,Vitamin B12,15,0,6,8,1
+2,Calcium,16,29,6,8,1
+2,Copper,17,15,6,8,1
+2,Iron,18,98,6,8,1
+2,Magnesium,19,56,6,8,1
+2,Phosphorus,20,65,6,8,1
+2,Selenium,21,0,6,8,1
+2,Zinc,22,80,6,8,1
+2,Energy,2,45,9,11,2
+2,Protein,5,32,9,11,2
+2,Vitamin A,6,23,9,11,2
+2,Vitamin C,8,17,9,11,2
+2,Thiamin,10,60,9,11,2
+2,Riboflavin,11,45,9,11,2
+2,Niacin,12,78,9,11,2
+2,Vitamin B6,13,80,9,11,2
+2,Folate,14,35,9,11,2
+2,Vitamin B12,15,0,9,11,2
+2,Calcium,16,36,9,11,2
+2,Copper,17,60,9,11,2
+2,Iron,18,98,9,11,2
+2,Magnesium,19,59,9,11,2
+2,Phosphorus,20,69,9,11,2
+2,Selenium,21,0,9,11,2
+2,Zinc,22,83,9,11,2
+3,Energy,2,61,12,23,3
+3,Protein,5,47,12,23,3
+3,Vitamin A,6,31,12,23,3
+3,Vitamin C,8,27,12,23,3
+3,Thiamin,10,78,12,23,3
+3,Riboflavin,11,62,12,23,3
+3,Niacin,12,87,12,23,3
+3,Vitamin B6,13,90,12,23,3
+3,Folate,14,71,12,23,3
+3,Vitamin B12,15,41,12,23,3
+3,Calcium,16,69,12,23,3
+3,Copper,17,53,12,23,3
+3,Iron,18,97,12,23,3
+3,Magnesium,19,68,12,23,3
+3,Phosphorus,20,83,12,23,3
+3,Selenium,21,35,12,23,3
+3,Zinc,22,87,12,23,3

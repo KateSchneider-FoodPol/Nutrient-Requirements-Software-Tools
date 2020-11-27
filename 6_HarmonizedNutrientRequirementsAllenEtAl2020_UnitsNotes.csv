@@ -1,0 +1,19 @@
+﻿nutr_no,nutr,unit,ul_note,unit_note
+1,protein,g/kg,.,Pregnancy and lactation are additional grams to add per day
+6,vitA,mcg,preformed only (retinol - listed separately),Retinol Activity Equivalent (RAE)
+7,retinol,mcg,,
+8,vitC,mg,.,
+9,vitE,mg,supplement,alpha-tocopherol
+10,thiamin,mg,.,
+11,riboflavin,mg,.,
+12,niacin,mg,supplement,
+13,vitB6,mg,.,
+14,folate,mcg,supplement,Dietary folate equivalent (DFE)
+15,vitB12,mcg,.,
+16,calcium,mg,,
+17,copper,mg,,
+18,iron,mg,,Absorption: _1=high _2=moderate _3=low
+19,magnesium,mg,,
+20,phosphorus,mg,,
+21,selenium,mcg,,
+22,zinc,mg,,Refinement of diet: _1=refined _2=Semi-refined _3=semi-unrefined _4=unrefined

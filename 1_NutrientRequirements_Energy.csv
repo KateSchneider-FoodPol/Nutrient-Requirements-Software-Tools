@@ -1,0 +1,101 @@
+﻿age_sex_grp,lifestage,sex,age_lower_yrs,age_upper_yrs,age_refmean,refheight_cm,refweight_kg,refPA,EER_eq,PA_level,energy
+1,Infant,,0,0.499,0.25,62,6,.,.,sedentary,.
+2,Infant,,0.5,1,0.75,71,9,.,723,sedentary,723
+3,Child,,1,2,1.5,86,12,.,988,sedentary,988
+4,Child,Male,3,3,3,115,12,1,988,sedentary,988
+5,Child,Female,3,3,3,115,12,1,988,sedentary,988
+6,Child,Male,4,8,6,115,20,1,1309.55,sedentary,1309.55
+7,Child,Female,4,8,6,115,20,1,1244.6,sedentary,1244.6
+8,Adolescent,Male,9,13,11,144,36,1,1694.12,sedentary,1694.12
+9,Adolescent,Male,14,18,16,174,61,1,2323.02,sedentary,2323.02
+10,Adult,Male,19,30,24.5,177,70,1,2497.31,sedentary,2497.31
+11,Adult,Male,31,50,40.5,177,70,1,2344.83,sedentary,2344.83
+12,Adult,Male,51,69,60.5,177,70,1,2154.23,sedentary,2154.23
+13,Older Adult,Male,70,.,75,177,70,1,2016.04,sedentary,2016.04
+14,Adolescent,Female,9,13,11,144,37,1,1536.46,sedentary,1536.46
+15,Adolescent,Female,14,18,16,163,54,1,1729.92,sedentary,1729.92
+16,Adult,Female,19,30,24.5,163,57,1,1901.61,sedentary,1901.61
+17,Adult,Female,31,50,40.5,163,57,1,1791.05,sedentary,1791.05
+18,Adult,Female,51,69,60.5,163,57,1,1652.85,sedentary,1652.85
+19,Older Adult,Female,70,.,75,163,57,1,1552.65,sedentary,1552.65
+20,Pregnancy,Female,14,18,16,163,67.25,1,2202.42,sedentary,2202.42
+21,Pregnancy,Female,19,30,24.5,163,70.25,1,2365.63,sedentary,2365.63
+22,Pregnancy,Female,31,50,40.5,163,70.25,1,2255.07,sedentary,2255.07
+23,Lactation,Female,14,18,16,163,57,1,2089.92,sedentary,2089.92
+24,Lactation,Female,19,30,24.5,163,57,1,2231.61,sedentary,2231.61
+25,Lactation,Female,31,50,40.5,163,57,1,2121.05,sedentary,2121.05
+1,Infant,,0,0.499,0.25,62,6,.,.,low active,.
+2,Infant,,0.5,1,0.75,71,9,.,723,low active,723
+3,Child,,1,2,2,86,12,.,988,low active,988
+4,Child,Male,3,3,6,115,12,1.13,988,low active,988
+5,Child,Female,3,3,6,115,12,1.16,988,low active,988
+6,Child,Male,4,8,6,115,20,1.13,1516.57,low active,1516.57
+7,Child,Female,4,8,6,115,20,1.16,1451.66,low active,1451.66
+8,Adolescent,Male,9,13,11,144,36,1.3,2380.08,low active,2380.08
+9,Adolescent,Male,14,18,16,174,61,1.3,3290.5,low active,3290.5
+10,Adult,Male,19,30,24.5,177,70,1.11,2724.87,low active,2724.87
+11,Adult,Male,31,50,40.5,177,70,1.11,2572.39,low active,2572.39
+12,Adult,Male,51,69,60.5,177,70,1.11,2381.79,low active,2381.79
+13,Older Adult,Male,70,.,75,177,70,1.11,2243.61,low active,2243.61
+14,Adolescent,Female,9,13,11,144,37,1.16,1814.85,low active,1814.85
+15,Adolescent,Female,14,18,16,163,54,1.16,2063.91,low active,2063.91
+16,Adult,Female,19,30,24.5,163,57,1.12,2107.63,low active,2107.63
+17,Adult,Female,31,50,40.5,163,57,1.12,1997.07,low active,1997.07
+18,Adult,Female,51,69,60.5,163,57,1.12,1858.87,low active,1858.87
+19,Older Adult,Female,70,.,75,163,57,1.12,1758.68,low active,1758.68
+20,Pregnancy,Female,14,18,16,163,67.25,1.12,2468.81,low active,2468.81
+21,Pregnancy,Female,19,30,24.5,163,70.25,1.12,2586.54,low active,2586.54
+22,Pregnancy,Female,31,50,40.5,163,70.25,1.12,2475.98,low active,2475.98
+23,Lactation,Female,14,18,16,163,57,1.12,2344.01,low active,2344.01
+24,Lactation,Female,19,30,24.5,163,57,1.12,2437.63,low active,2437.63
+25,Lactation,Female,31,50,40.5,163,57,1.12,2327.07,low active,2327.07
+1,Infant,,0,0.499,0.25,62,6,.,.,active,.
+2,Infant,,0.5,1,0.75,71,9,.,723,active,723
+3,Child,,1,2,2,86,12,.,988,active,988
+4,Child,Male,3,3,6,115,12,1.26,988,active,988
+5,Child,Female,3,3,6,115,12,1.31,988,active,988
+6,Child,Male,4,8,6,115,20,1.26,1723.59,active,1723.59
+7,Child,Female,4,8,6,115,20,1.31,1645.77,active,1645.77
+8,Adolescent,Male,9,13,11,144,36,1.26,2288.62,active,2288.62
+9,Adolescent,Male,14,18,16,174,61,1.26,3161.5,active,3161.5
+10,Adult,Male,19,30,24.5,177,70,1.25,3014.51,active,3014.51
+11,Adult,Male,31,50,40.5,177,70,1.25,2862.03,active,2862.03
+12,Adult,Male,51,69,60.5,177,70,1.25,2671.43,active,2671.43
+13,Older Adult,Male,70,.,75,177,70,1.25,2533.24,active,2533.24
+14,Adolescent,Female,9,13,11,144,37,1.31,2075.85,active,2075.85
+15,Adolescent,Female,14,18,16,163,54,1.31,2377.02,active,2377.02
+16,Adult,Female,19,30,24.5,163,57,1.27,2365.17,active,2365.17
+17,Adult,Female,31,50,40.5,163,57,1.27,2254.61,active,2254.61
+18,Adult,Female,51,69,60.5,163,57,1.27,2116.41,active,2116.41
+19,Older Adult,Female,70,.,75,163,57,1.27,2016.21,active,2016.21
+20,Pregnancy,Female,14,18,16,163,67.25,1.27,2801.8,active,2801.8
+21,Pregnancy,Female,19,30,24.5,163,70.25,1.27,2862.67,active,2862.67
+22,Pregnancy,Female,31,50,40.5,163,70.25,1.27,2752.11,active,2752.11
+23,Lactation,Female,14,18,16,163,57,1.27,2661.62,active,2661.62
+24,Lactation,Female,19,30,24.5,163,57,1.27,2695.17,active,2695.17
+25,Lactation,Female,31,50,40.5,163,57,1.27,2584.61,active,2584.61
+1,Infant,,0,0.499,0.208333333,62,6,.,.,very active,.
+2,Infant,,0.5,1,0.75,71,9,.,723,very active,723
+3,Child,,1,2,2,86,12,.,988,very active,988
+4,Child,Male,3,3,6,115,12,1.42,988,very active,988
+5,Child,Female,3,3,6,115,12,1.56,988,very active,988
+6,Child,Male,4,8,6,115,20,1.42,1978.38,very active,1978.38
+7,Child,Female,4,8,6,115,20,1.56,1969.3,very active,1969.3
+8,Adolescent,Male,9,13,11,144,36,1.42,2654.46,very active,2654.46
+9,Adolescent,Male,14,18,16,174,61,1.42,3677.49,very active,3677.49
+10,Adult,Male,19,30,24.5,177,70,1.48,3490.33,very active,3490.33
+11,Adult,Male,31,50,40.5,177,70,1.48,3337.85,very active,3337.85
+12,Adult,Male,51,69,60.5,177,70,1.48,3147.25,very active,3147.25
+13,Older Adult,Male,70,.,75,177,70,1.48,3009.06,very active,3009.06
+14,Adolescent,Female,9,13,11,144,37,1.56,2510.84,very active,2510.84
+15,Adolescent,Female,14,18,16,163,54,1.56,2898.88,very active,2898.88
+16,Adult,Female,19,30,24.5,163,57,1.45,2674.21,very active,2674.21
+17,Adult,Female,31,50,40.5,163,57,1.45,2563.65,very active,2563.65
+18,Adult,Female,51,69,60.5,163,57,1.45,2425.45,very active,2425.45
+19,Older Adult,Female,70,.,75,163,57,1.45,2325.26,very active,2325.26
+20,Pregnancy,Female,14,18,16,163,67.25,1.45,3201.38,very active,3201.38
+21,Pregnancy,Female,19,30,24.5,163,70.25,1.45,3194.04,very active,3194.04
+22,Pregnancy,Female,31,50,40.5,163,70.25,1.45,3083.48,very active,3083.48
+23,Lactation,Female,14,18,16,163,57,1.45,3042.76,very active,3042.76
+24,Lactation,Female,19,30,24.5,163,57,1.45,3004.21,very active,3004.21
+25,Lactation,Female,31,50,40.5,163,57,1.45,2893.65,very active,2893.65

@@ -1,0 +1,26 @@
+﻿age_sex_grp,lifestage,sex,age_lower_yrs,age_upper_yrs,carbohydrates,protein,protein_perkg,refweight_kg
+1,Infant,all,0,0.499,60,9.1,1.52,6
+2,Infant,all,0.5,1,95,11,1.22,9
+3,Child,all,1,2,130,13,1.08,12
+4,Child,Male,3,3,130,13,1.08,12
+5,Child,Female,3,3,130,13,1.08,12
+6,Child,Male,4,8,130,19,0.95,20
+7,Child,Female,4,8,130,19,0.95,20
+8,Adolescent,Male,9,13,130,34,0.94,36
+9,Adolescent,Male,14,18,130,52,0.85,61
+10,Adult,Male,19,30,130,56,0.80,70
+11,Adult,Male,31,50,130,56,0.80,70
+12,Adult,Male,51,69,130,56,0.80,70
+13,Older Adult,Male,70,.,130,56,0.80,70
+14,Adolescent,Female,9,13,130,34,0.92,37
+15,Adolescent,Female,14,18,130,46,0.85,54
+16,Adult,Female,19,30,130,46,0.81,57
+17,Adult,Female,31,50,130,46,0.81,57
+18,Adult,Female,51,69,130,46,0.81,57
+19,Older Adult,Female,70,.,130,46,0.81,57
+20,Pregnancy,Female,14,18,175,71,1.06,67.25
+21,Pregnancy,Female,19,30,175,71,1.01,70.25
+22,Pregnancy,Female,31,50,175,71,1.01,70.25
+23,Lactation,Female,14,18,210,71,1.25,57
+24,Lactation,Female,19,30,210,71,1.25,57
+25,Lactation,Female,31,50,210,71,1.25,57

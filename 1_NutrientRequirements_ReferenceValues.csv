@@ -1,0 +1,28 @@
+﻿age_sex_grp,lifestage,sex,age_lower_yrs,age_upper_yrs,refage_yrs,dri_refheight_cm,dri_refweight_kg,age_lower_mos,age_upper_mos,bf_match_id
+1,Infant,all,0,0.499,0.25,62,6,,,
+2,Infant,all,0.5,1,0.58,71,9,6,8,1
+2,Infant,all,0.5,1,0.83,71,9,9,11,2
+3,Child,all,1,2,2,86,12,12,23,3
+4,Child,Male,3,3,3,86,12,,,
+5,Child,Female,3,3,3,86,12,,,
+6,Child,Male,4,8,6,115,20,,,
+7,Child,Female,4,8,6,115,20,,,
+8,Adolescent,Male,9,13,11,144,36,,,
+9,Adolescent,Male,14,18,16,174,61,,,
+10,Adult,Male,19,30,24.5,177,70,,,
+11,Adult,Male,31,50,40.5,177,70,,,
+12,Adult,Male,51,69,,177,70,,,
+13,Older Adult,Male,70,.,,177,70,,,
+14,Adolescent,Female,9,13,,144,37,,,
+15,Adolescent,Female,14,18,,163,54,,,
+16,Adult,Female,19,30,,163,57,,,
+17,Adult,Female,31,50,,163,57,,,
+18,Adult,Female,51,69,,163,57,,,
+19,Older Adult,Female,70,.,,163,57,,,
+20,Pregnancy,Female,14,18,,163,67.25,,,
+21,Pregnancy,Female,19,30,,163,70.25,,,
+22,Pregnancy,Female,31,50,,163,70.25,,,
+23,Lactation,Female,14,18,,163,57,,,
+24,Lactation,Female,19,30,,163,57,,,
+25,Lactation,Female,31,50,,163,57,,,
+,,,,,,,,,,

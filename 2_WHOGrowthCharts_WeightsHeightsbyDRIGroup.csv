@@ -1,0 +1,26 @@
+﻿age_sex_grp,lifestage,sex,age_lower_yrs,age_upper_yrs,who_refweight_kg,iom_refweight_kg,who_refheight_cm,iom_refheight_cm
+1,Infant,,0,0.499,5.60,6.00,59.10,62
+2,Infant,,0.5,1,8.40,9.00,70.35,71
+3,Child,,1,2,11.75,12.00,86.50,86
+4,Child,Male,3,3,15.25,12.00,99.55,86
+5,Child,Female,3,3,14.90,12.00,98.70,86
+6,Child,Male,4,8,23.78,20.00,118.63,115
+7,Child,Female,4,8,23.84,20.00,117.74,115
+8,Adolescent,Male,9,13,41.63,36.00,145.74,144
+9,Adolescent,Male,14,18,72.77,61.00,174.13,174
+10,Adult,Male,19,30,79.79,70.00,176.54,177
+11,Adult,Male,31,50,66.78,70.00,176.54,177
+12,Adult,Male,51,69,66.78,70.00,176.54,177
+13,Older Adult,Male,70,.,66.78,70.00,176.54,177
+14,Adolescent,Female,9,13,44.63,37.00,147.92,144
+15,Adolescent,Female,14,18,64.72,54.00,162.70,163
+16,Adult,Female,19,30,66.82,57.00,163.16,163
+17,Adult,Female,31,50,57.04,57.00,163.16,163
+18,Adult,Female,51,69,57.04,57.00,163.16,163
+19,Older Adult,Female,70,.,57.04,57.00,163.16,163
+20,Pregnancy,Female,14,18,77.97,67.25,163.16,163
+21,Pregnancy,Female,19,30,80.07,70.25,163.16,163
+22,Pregnancy,Female,31,50,70.29,70.25,163.16,163
+23,Lactation,Female,14,18,57.04,57.00,163.16,163
+24,Lactation,Female,19,30,57.04,57.00,163.16,163
+25,Lactation,Female,31,50,57.04,57.00,163.16,163

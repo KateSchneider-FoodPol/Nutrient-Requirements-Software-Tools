@@ -1,0 +1,24 @@
+﻿nutr_no,nutr,unit,ul_note,rda_note,amdr_unit,unit_note,USDA_Food_Composition_Unit
+1,price,USD,.,.,.,,
+2,energy,kcal,.,.,.,,kcal
+3,carbohydrate,g,.,.,% total kcal,,g
+4,protein,g,.,.,% total kcal,,g
+5,lipids,g,.,.,% total kcal,,g
+6,vitA,mcg,preformed only (retinol - listed separately),.,.,,mcg
+7,retinol,mcg,,.,.,,mcg
+8,vitC,mg,.,AI for infants,.,,mg
+9,vitE,mg,supplement,AI for infants,.,,mg
+10,thiamin,mg,.,AI for infants,.,,mg
+11,riboflavin,mg,.,AI for infants,.,,mg
+12,niacin,mg,supplement,AI for infants,.,,mg
+13,vitB6,mg,.,AI for infants,.,,mg
+14,folate,mcg,supplement,.,.,,mcg
+15,vitB12,mcg,.,EAR/RDA for adults >50 from supplements/fortified foods (crystalline form),.,,mcg
+16,calcium,mg,.,,.,"Calcium UL was listed in grams, has been converted to mg to be consistent in unit with RDA and EAR",mg
+17,copper,mg,.,.,.,Unit has been converted from mcg to mg to be consistent with food composition tables,mg
+18,iron,mg,.,AI for infants 0-6 months,.,,mg
+19,magnesium,mg,supplement,AI for infants,.,,mg
+20,phosphorus,mg,.,AI for infants,.,Phosphorus UL has been converted from grams to mg,mg
+21,selenium,mcg,.,AI for infants,.,,mcg
+22,zinc,mg,.,AI for infants 0-6 months,.,,mg
+23,sodium,mg,CDDR,,.,,mg

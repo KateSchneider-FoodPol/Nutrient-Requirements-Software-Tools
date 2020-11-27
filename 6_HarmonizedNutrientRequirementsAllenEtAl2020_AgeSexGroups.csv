@@ -1,0 +1,27 @@
+﻿H_age_sex_grp,lifestage,sex,age_lower_yrs,age_upper_yrs
+1,Infant,all,0.5,1
+2,Child,all,1,2
+3,Child,Male,3,3
+4,Child,Female,3,3
+5,Child,Male,4,6
+6,Child,Female,4,6
+7,Child,Male,7,10
+8,Child,Female,7,10
+9,Adolescent,Male,11,14
+10,Adolescent,Male,15,17
+11,Adult,Male,18,24
+12,Adult,Male,25,50
+13,Adult,Male,51,70
+14,Older Adult,Male,71,.
+15,Adolescent,Female,11,14
+16,Adolescent,Female,15,17
+17,Adult,Female,18,24
+18,Adult,Female,25,50
+19,Adult,Female,51,70
+20,Older Adult,Female,71,.
+21,Pregnancy,Female,.,18
+22,Pregnancy,Female,19,30
+23,Pregnancy,Female,31,50
+24,Lactation,Female,14,18
+25,Lactation,Female,19,30
+26,Lactation,Female,31,50
